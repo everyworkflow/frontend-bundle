@@ -4,7 +4,7 @@
 
 import {lazy} from "react";
 
-const DataFormPage = lazy(() => import("@EveryWorkflow/AdminPanelBundle/Admin/Page/Examples/DataFormPage"));
+const DataFormPage = lazy(() => import("@EveryWorkflow/AdminPanelBundle/Page/Examples/DataFormPage"));
 const DataFormBlockPage = lazy(() => import("@EveryWorkflow/FrontendBundle/Page/Example/DataFormBlockPage"));
 const PageBuilderEditPage = lazy(() => import("@EveryWorkflow/FrontendBundle/Page/Example/PageBuilderEditPage"));
 

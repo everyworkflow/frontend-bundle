@@ -8,10 +8,10 @@ declare(strict_types=1);
 
 namespace EveryWorkflow\FrontendBundle\Controller;
 
+use EveryWorkflow\CoreBundle\Annotation\EwRoute;
 use EveryWorkflow\UrlRewriteBundle\Repository\UrlRewriteRepositoryInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 
 class FrontendController extends AbstractController
 {
@@ -22,23 +22,18 @@ class FrontendController extends AbstractController
         $this->urlRewriteRepository = $urlRewriteRepository;
     }
 
-    /**
-     * @Route(
-     *     path="/{wildcard}",
-     *     name="frontend",
-     *     priority=-1000,
-     *     methods="GET",
-     *     requirements={"wildcard": ".*"}
-     * )
-     */
-    public function __invoke(string $wildcard): Response
+    #[EwRoute(
+        path: '/{wildcard}',
+        name: 'frontend',
+        priority: -1000,
+        methods: 'GET',
+        requirements: ['wildcard' => '.*']
+    )]
+    public function __invoke(string $wildcard = 'home'): Response
     {
         $data = [
             'page_title' => 'Frontend',
         ];
-        if (empty($wildcard)) {
-            $wildcard = 'home';
-        }
         try {
             $urlRewrite = $this->urlRewriteRepository->findOne(['url' => $wildcard]);
             if ($urlRewrite->getData('meta_title')) {

@@ -5,5 +5,4 @@
 import FrontendStateInterface from "@EveryWorkflow/FrontendBundle/Model/FrontendStateInterface";
 
 export const frontendState: FrontendStateInterface = {
-    alert_data: [],
 };

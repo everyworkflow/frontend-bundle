@@ -4,12 +4,12 @@
 
 import React from 'react';
 import FrontendRoot from "@EveryWorkflow/FrontendBundle/FrontendRoot";
-import "@EveryWorkflow/CoreBundle/AntVariables.less";
+import "@EveryWorkflow/PanelBundle/AntVariables.less";
 import "@EveryWorkflow/FrontendBundle/FrontendStyle.less";
 
 const Frontend = () => {
     return (
-        <FrontendRoot/>
+        <FrontendRoot />
     );
 }
 

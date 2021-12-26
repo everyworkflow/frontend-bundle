@@ -5,7 +5,7 @@
 @import "~antd/lib/style/themes/default.less";
 //@import '~antd/dist/antd.dark.less';
 @import "~antd/dist/antd.less";
-@import "./../../../CoreBundle/Resources/assets/AntVariables.less";
+@import "./../../../PanelBundle/Resources/assets/AntVariables.less";
 
 .app-container {
   margin-left: 24px;
@@ -45,9 +45,28 @@
     border: none;
     margin: 6px 0;
 
-    .brand-home.ant-menu-item img {
-      height: 40px;
-      padding-bottom: 4px;
+    .brand-home.ant-menu-item {
+      &::after {
+        display: none;
+      }
+      img {
+        height: 40px;
+        padding-bottom: 4px;
+      }
     }
+  }
+}
+
+.app-sticky-page-header-panel {
+  top: 0;
+  z-index: 6;
+  border-bottom: solid 1px @border-color-split;
+  background-color: @body-background;
+
+  .ant-layout-header {
+    height: 55px;
+    padding: 0 16px;
+    line-height: normal;
+    background-color: @body-background;
   }
 }

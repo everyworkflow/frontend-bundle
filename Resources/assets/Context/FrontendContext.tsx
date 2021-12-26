@@ -2,8 +2,8 @@
  * @copyright EveryWorkflow. All rights reserved.
  */
 
-import {createContext} from 'react';
-import {panelState} from "@EveryWorkflow/AdminPanelBundle/Admin/State/PanelState";
+import { createContext } from 'react';
+import { frontendState } from "@EveryWorkflow/FrontendBundle/State/FrontendState";
 import FrontendStateInterface from "@EveryWorkflow/FrontendBundle/Model/FrontendStateInterface";
 
 export interface FrontendContextInterface {
@@ -12,7 +12,7 @@ export interface FrontendContextInterface {
 }
 
 const FrontendContext = createContext<FrontendContextInterface>({
-    state: panelState,
+    state: frontendState,
     dispatch: () => null,
 });
 
