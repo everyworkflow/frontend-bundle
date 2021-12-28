@@ -11,10 +11,8 @@
     ],
     "require": {
         "symfony/twig-bundle": "6.0.*",
-        "everyworkflow/base-bundle": "dev-main",
-        "everyworkflow/page-builder-bundle": "dev-main",
-        "everyworkflow/page-bundle": "dev-main",
-        "everyworkflow/static-block-bundle": "dev-main"
+        "everyworkflow/core-bundle": "dev-main",
+        "everyworkflow/panel-bundle": "dev-main"
     },
     "autoload": {
         "psr-4": {
