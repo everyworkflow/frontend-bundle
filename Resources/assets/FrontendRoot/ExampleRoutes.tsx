@@ -2,7 +2,7 @@
  * @copyright EveryWorkflow. All rights reserved.
  */
 
-import {lazy} from "react";
+import { lazy } from "react";
 
 const DataFormPage = lazy(() => import("@EveryWorkflow/AdminPanelBundle/Page/Examples/DataFormPage"));
 const DataFormBlockPage = lazy(() => import("@EveryWorkflow/FrontendBundle/Page/Example/DataFormBlockPage"));
